@@ -6,3 +6,4 @@ Test Accuracy:  96.25
 Train Accuracy:  96.31019387116947
 
 - Confusion Matrix
+- <img src= "https://github.com/yassminSaber/Device-Price-Prediction/blob/master/output.png" hight = 100 width= 100 />
