@@ -1,0 +1,141 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+
+<div class="container">
+
+  <div class="sub-container">
+    
+    <h2>Device Price Classifier</h2>      
+    <p>Using Machine Learning to Classify Device Price</p>
+
+  </div>         
+</div>
+
+
+<div class="container2">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Device Price Classifier</div>
+      <div class="panel-body">
+      	<form action="{{ url_for('predict')}}" method="POST">
+			
+            </p>
+            <label class="w3-text-teal"><b>Battery Power</b></label>
+            <input id="id1" class="w3-input w3-border" name="Battery Power" type="number" placeholder="Battery Power" required="required"></p>
+            <p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Has Bluetooth or not (0,1)</b></label>
+            <input id="id1" class="w3-input w3-border" name="Bluetooth" placeholder="Bluetooth" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Clock Speed</b></label>
+            <input id="id1" class="w3-input w3-border" name="Clock Speed" placeholder="Clock Speed" step="0.01" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b> Has dual sim support or not (0,1)</b></label>
+            <input id="id1" class="w3-input w3-border" name="Dual SIM" placeholder="Dual SIM" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b> Front Camera megapixels</b></label>
+            <input id="id1" class="w3-input w3-border" name="Front Camera megapixels" placeholder="Front Camera megapixels" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b> Has 4G or not (0,1)</b></label>
+            <input id="id1" class="w3-input w3-border" name="4G" placeholder="4G" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Internal Memory in Gigabytes</b></label>
+            <input id="id1" class="w3-input w3-border" name="Internal Memory" placeholder="Internal Memory" type="number" required="required">
+            </p>
+            
+            <p>      
+            <label class="w3-text-teal"><b>Mobile Depth in cm</b></label>
+            <input id="id1" class="w3-input w3-border" name="Mobile Depth" placeholder="Mobile Depth" step="0.01" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Weight of mobile phone</b></label>
+            <input id="id1" class="w3-input w3-border" name="Weight of mobile phone" placeholder="Weight of mobile phone" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Number of cores of the processor</b></label>
+            <input id="id1" class="w3-input w3-border" name="Number of cores" placeholder="Number of cores" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Primary Camera megapixels</b></label>
+            <input id="id1" class="w3-input w3-border" name="Primary Camera megapixels" placeholder="Primary Camera megapixels" type="number" required="required">
+            </p>
+            
+            <p>      
+            <label class="w3-text-teal"><b>Pixel Resolution Height</b></label>
+            <input id="id1" class="w3-input w3-border" name="Pixel Resolution Height" placeholder="Pixel Resolution Height" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Pixel Resolution Width</b></label>
+            <input id="id1" class="w3-input w3-border" name="Pixel Resolution Width" placeholder="Pixel Resolution Width" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Random Access Memory in Megabytes</b></label>
+            <input id="id1" class="w3-input w3-border" name="RAM" placeholder="RAM" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Screen Height of mobile in cm</b></label>
+            <input id="id1" class="w3-input w3-border" name="Screen Height" placeholder="Screen Height" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Screen Width of mobile in cm</b></label>
+            <input id="id1" class="w3-input w3-border" name="Screen Width" placeholder="Screen Width" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>longest time that a single battery charge will last</b></label>
+            <input id="id1" class="w3-input w3-border" name="talk_time" placeholder="talk_time " type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Has 3G or not (0, 1)</b></label>
+            <input id="id1" class="w3-input w3-border" name="3G" placeholder="3G" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Has touch screen or not (0, 1)</b></label>
+            <input id="id1" class="w3-input w3-border" name="Touch Screen" placeholder="Touch Screen" type="number" required="required">
+            </p>
+
+            <p>      
+            <label class="w3-text-teal"><b>Has wifi or not (0, 1)</b></label>
+            <input id="id1" class="w3-input w3-border" name="WIFI" placeholder="WIFI" type="number" required="required">
+            </p>
+            
+
+			<button type="submit" class="btn btn-primary" >Predict Price</button>
+			</form>
+
+<!-- Main Input For Receiving Query to our ML --> 
+
+
+      </div>
+    </div>
+
+
+
+
+{% endblock %}
+
+{% block styles %}
+{{super()}} 
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
